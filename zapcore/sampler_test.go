@@ -28,9 +28,9 @@ import (
 	"time"
 
 	"go.uber.org/atomic"
-	"go.uber.org/zap/internal/ztest"
-	. "go.uber.org/zap/zapcore"
-	"go.uber.org/zap/zaptest/observer"
+	"github.com/liranbg/uberzap/internal/ztest"
+	. "github.com/liranbg/uberzap/zapcore"
+	"github.com/liranbg/uberzap/zaptest/observer"
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"

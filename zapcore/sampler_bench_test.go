@@ -27,8 +27,8 @@ import (
 
 	"github.com/stretchr/testify/assert"
 	"go.uber.org/atomic"
-	"go.uber.org/zap/internal/ztest"
-	. "go.uber.org/zap/zapcore"
+	"github.com/liranbg/uberzap/internal/ztest"
+	. "github.com/liranbg/uberzap/zapcore"
 )
 
 var counterTestCases = [][]string{

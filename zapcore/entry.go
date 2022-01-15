@@ -27,8 +27,8 @@ import (
 	"sync"
 	"time"
 
-	"go.uber.org/zap/internal/bufferpool"
-	"go.uber.org/zap/internal/exit"
+	"github.com/liranbg/uberzap/internal/bufferpool"
+	"github.com/liranbg/uberzap/internal/exit"
 
 	"go.uber.org/multierr"
 )
