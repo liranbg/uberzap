@@ -80,9 +80,6 @@ func (c consoleEncoder) EncodeEntry(ent Entry, fields []Field) (*buffer.Buffer, 
 	if c.TimeKey != "" && c.EncodeTime != nil {
 		c.EncodeTime(ent.Time, arr)
 	}
-	if c.LevelKey != "" && c.EncodeLevel != nil {
-		c.EncodeLevel(ent.Level, arr)
-	}
 	if ent.LoggerName != "" && c.NameKey != "" {
 		nameEncoder := c.EncodeName
 
@@ -92,6 +89,9 @@ func (c consoleEncoder) EncodeEntry(ent Entry, fields []Field) (*buffer.Buffer, 
 		}
 
 		nameEncoder(ent.LoggerName, arr)
+	}
+	if c.LevelKey != "" && c.EncodeLevel != nil {
+		c.EncodeLevel(ent.Level, arr)
 	}
 	if ent.Caller.Defined {
 		if c.CallerKey != "" && c.EncodeCaller != nil {
